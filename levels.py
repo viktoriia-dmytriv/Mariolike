@@ -5,6 +5,15 @@ from platform import Platform
 # initialize platforms, so they form box around screen and add some floating is_ghost = true platforms to form arena
 levels = \
     [
+        {
+            "size": (800, 600),
+            "player_pos": (100, 500),
+            "level":
+                [Platform(800 / 2, 600, 800, 10), Platform(100, 100, 100, 10, True), Platform(200, 200, 100, 10),
+                 Platform(300, 300, 100, 10),
+                 Platform(400, 400, 100, 10), Platform(500, 500, 100, 10), Platform(600, 600, 100, 10),
+                 Platform(700, 700, 100, 10), Obstacle(700, 500, 100, 10)]
+        },
         generate_level(0.5,
                        """
                        ........................................
@@ -36,16 +45,6 @@ levels = \
                        ........................................
                        ========================================
                        """),
-
-        {
-            "size": (800, 600),
-            "player_pos": (100, 500),
-            "level":
-                [Platform(800 / 2, 600, 800, 10), Platform(100, 100, 100, 10, True), Platform(200, 200, 100, 10),
-                 Platform(300, 300, 100, 10),
-                 Platform(400, 400, 100, 10), Platform(500, 500, 100, 10), Platform(600, 600, 100, 10),
-                 Platform(700, 700, 100, 10), Obstacle(700, 500, 100, 10)]
-        },
         generate_level(0.5,
                        """
                        ..........................................
